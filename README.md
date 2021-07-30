@@ -18,8 +18,13 @@ This is a simple Kafka example using ruby and the gem ```ruby-kafka```, used in 
 6. Create a Kafka topic. In this example, we are using atopic called ```test```, but you can use whatever name youlike, just remember to edit the code with the name youchoose. To create a topic, run the following command withboth Kafka and Zookeeper servers running:
 ```bin/kafka-topics.sh --create --topic test--bootstrap-server localhost:9092```
 
-7. Run the code and watch as the message we produce isconsumed and printed on screen:
-```ruby kafka_example.rb```
+7. Run the consumer code in a terminal using the following command:
+```ruby kafka_consumer.rb```
+
+8. Run the producer code in a different terminal using the following command:
+```ruby kafka_producer.rb```
+
+Now watch as the message your producer sent is printed by our consumer in it's terminal!
 
 **Obs: The code will be running on a loop, waiting for new messages to consume. If you want to stop it, simply use ```Ctrl+C```**
 
